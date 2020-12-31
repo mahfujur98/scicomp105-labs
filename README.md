@@ -1,2 +1,2 @@
-# scicomp105-labs
-BNL Scientific Computing 105 using Python
+# Welcome to BNL Scientific Computing 105 (Labs)
+## using Python and Visual Studio Code
