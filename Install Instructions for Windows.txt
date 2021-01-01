@@ -33,34 +33,42 @@ SciComp105 - Windows Install
 		.\activate
 
 # Update core Python tools
-	python -m pip install --upgrade pip
-	pip install --upgrade setuptools
-	pip install --upgrade wheel
+	From within a PowerShell session that has been ACTIVATED
+	so it is running inside the Python *virtual* environment:
+		python -m pip install --upgrade pip
+		pip install --upgrade setuptools
+		pip install --upgrade wheel
 	
 # Install Requirements.txt
-	pip install -r requirements.txt
-	pip install -r requirements.txt
-		
+	From within a PowerShell session that has been ACTIVATED
+	so it is running inside the Python *virtual* environment:
+		pip install -r requirements.txt
+
+	
 # Manual Install Modules (ONLY IF NECESSARY)
-	pip install --upgrade numpy==1.19.3				
-	pip install --upgrade matplotlib
-	pip install --upgrade scipy
-	pip install --upgrade mpmath	
-	pip install --upgrade Pillow
-	pip install --upgrade pygame
-	pip install --upgrade sympy
-	pip install --upgrade numba
-	pip install --upgrade vtk	
-	pip install --upgrade PyQt5
-	pip install --upgrade mayavi
-	pip install --upgrade pandas
-	pip install --upgrade sklearn
-	pip install --upgrade PuLP
-	pip install --upgrade ipython
-	pip install --upgrade mypy
+	From within a PowerShell session that has been ACTIVATED
+	so it is running inside the Python *virtual* environment:
+		pip install --upgrade numpy==1.19.3				
+		pip install --upgrade matplotlib
+		pip install --upgrade scipy
+		pip install --upgrade mpmath	
+		pip install --upgrade Pillow
+		pip install --upgrade pygame
+		pip install --upgrade sympy
+		pip install --upgrade numba
+		pip install --upgrade vtk	
+		pip install --upgrade PyQt5
+		pip install --upgrade mayavi
+		pip install --upgrade pandas
+		pip install --upgrade sklearn
+		pip install --upgrade PuLP
+		pip install --upgrade ipython
+		pip install --upgrade mypy
 		
 # Deactivate virtual environment
-	deactivate
+	From within a PowerShell session that has been ACTIVATED
+	so it is running inside the Python *virtual* environment:
+		deactivate
 
 # Install VSCode
 	https://code.visualstudio.com/download
