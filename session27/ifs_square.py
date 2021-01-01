@@ -34,7 +34,7 @@ def main():
     ifs.generate_transforms()
 
     ss = SimpleScreen(world_rect=((-2, -2), (6, 6)),
-                      screen_size=(1000, 1000),
+                      screen_size=(900, 900),
                       draw_function=plot_triangle_ifs,
                       title='IFS Square')
     ss.show()

@@ -31,7 +31,7 @@ def main():
     ifs.generate_transforms()
 
     ss = SimpleScreen(world_rect=((0, 0), (30, 30)),
-                      screen_size=(1000, 1000),
+                      screen_size=(900, 900),
                       draw_function=plot_triangle_ifs,
                       title='Sierpinksi Triangle')
     ss.show()

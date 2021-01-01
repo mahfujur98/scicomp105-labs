@@ -22,7 +22,7 @@ def plot_logistics_map(ss):
 def main():
     ss = SimpleScreen(world_rect=((2.5, 0), (4.0, 1)),
                       draw_function=plot_logistics_map,
-                      screen_size=(1000, 1000),
+                      screen_size=(900, 900),
                       title='Logistics Map')
     ss.show()
 
