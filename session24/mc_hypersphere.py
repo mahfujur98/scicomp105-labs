@@ -5,7 +5,7 @@ import numpy as np
 from numba import vectorize, float64, int32
 
 
-@vectorize([float64(int32, int32)], nopython=True)
+@vectorize([float64(float64, float64)], nopython=True)
 def halton(n, p):
     h, f = 0, 1
     while n > 0:
@@ -32,9 +32,9 @@ def calc_hypersphere_volume():
     err = np.abs((act_volume - est_volume) / act_volume)
 
     print(f"Total dots   = {iterations:,}\n"
-          f"Act. Volume = {act_volume:.6f}\n"
-          f"Est. Volume = {est_volume:.6f}\n"
-          f"Abs. % Err   = {err:.6%})\n")
+          f"Act. Volume  = {act_volume:.6f}\n"
+          f"Est. Volume  = {est_volume:.6f}\n"
+          f"Abs. % Err   = {err:.6%}\n")
 
 
 def main():

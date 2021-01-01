@@ -9,7 +9,7 @@ from scipy.special import gamma
 from scipy.signal import find_peaks
 
 
-@vectorize([float64(int32, int32)], nopython=True)
+@vectorize([float64(float64, float64)], nopython=True)
 def halton(n, p):
     h, f = 0, 1
     while n > 0:

@@ -1,0 +1,66 @@
+SciComp105 - Windows Install
+	
+# Check Local Computer For Python Interpreter
+    Install PowerShell
+        https://github.com/PowerShell/PowerShell/releases
+	From within a PowerShell session:
+		Get-ChildItem -Path C:\ -Filter python.exe -Recurse -Force -ErrorAction SilentlyContinue | Sort-Object FullName | Select-Object FullName
+		Get-ChildItem -Path C:\ -Filter activate.bat -Recurse -Force -ErrorAction SilentlyContinue | Sort-Object FullName | Select-Object FullName
+		dir env: | sort name
+		$Env:PATH.split(';')
+		Get-Command python | fl
+	
+# Install Python 3.8
+	https://www.python.org/downloads/windows
+    *** DO NOT LET INSTALLER ADD PYTHON TO PATH ***
+
+# Install Git
+    https://git-scm.com/downloads
+
+# Clone SciComp105-labs repository to Desktop
+	From within a PowerShell session:
+		cd C:\Users\dbier\Desktop
+		git clone https://github.com/dbiersach/scicomp105-labs    
+	
+# Create virtual environment
+    From within a PowerShell session:
+        cd C:\Users\dbier\AppData\Local\Programs\Python\Python38
+        .\python -m venv C:\Users\dbier\Desktop\scicomp105_labs\.venv
+		
+# Activate virtual environment
+    From within a PowerShell session:
+        cd C:\Users\dbier\Desktop\scicomp105_labs\.venv\scripts
+		.\activate
+
+# Update core Python tools
+	python -m pip install --upgrade pip
+	pip install --upgrade setuptools
+	pip install --upgrade wheel
+	
+# Install Requirements.txt
+	pip install -r requirements.txt
+		
+# Manual Install Modules (ONLY IF NECESSARY)
+	pip install --upgrade numpy==1.19.3				
+	pip install --upgrade matplotlib
+	pip install --upgrade scipy
+	pip install --upgrade mpmath	
+	pip install --upgrade Pillow
+	pip install --upgrade pygame
+	pip install --upgrade sympy
+	pip install --upgrade numba
+	pip install --upgrade vtk	
+	pip install --upgrade PyQt5
+	pip install --upgrade mayavi
+	pip install --upgrade pandas
+	pip install --upgrade sklearn
+	pip install --upgrade PuLP
+	pip install --upgrade ipython
+	pip install --upgrade mypy
+		
+# Deactivate virtual environment
+	deactivate
+
+# Install VSCode
+	https://code.visualstudio.com/download
+		

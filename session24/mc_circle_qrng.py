@@ -48,7 +48,7 @@ def plot_prng(ax):
             f"= {est_area:.6f}\n= {err:.6%}", ha='left')
 
 
-@vectorize([float64(int32, int32)], nopython=True)
+@vectorize([float64(float64, float64)], nopython=True)
 def halton(n, p):
     h, f = 0, 1
     while n > 0:

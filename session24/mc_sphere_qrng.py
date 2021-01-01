@@ -29,7 +29,7 @@ def calc_prng():
           f"PRNG Abs. % Err  = {err:.6%})\n")
 
 
-@vectorize([float64(int32, int32)], nopython=True)
+@vectorize([float64(float64, float64)], nopython=True)
 def halton(n, p):
     h, f = 0, 1
     while n > 0:

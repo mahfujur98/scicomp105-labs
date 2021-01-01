@@ -124,6 +124,9 @@
         "zmin",
         "zorder"
     ],
+    "files.watcherExclude": {
+		"**/.venv/**": true
+	},	
     "python.languageServer": "Pylance",
     "python.analysis.stubPath": "",
     "[git-commit]": {"editor.rulers": [50]},

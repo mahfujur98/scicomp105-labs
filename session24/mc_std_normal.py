@@ -14,7 +14,7 @@ def f(x):
     return 0.0
 
 
-@vectorize([float64(int32, int32)], nopython=True)
+@vectorize([float64(float64, float64)], nopython=True)
 def halton(n, p):
     h, f = 0, 1
     while n > 0:
