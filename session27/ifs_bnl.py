@@ -60,7 +60,7 @@ def main():
     ifs.generate_transforms()
 
     ss = SimpleScreen(world_rect=((0, 0), (17, 7)),
-                      screen_size=(1400, 600),
+                      screen_size=(1200, 500),
                       draw_function=plot_triangle_ifs,
                       title='Brookhaven National Laboratory')
     ss.show()
