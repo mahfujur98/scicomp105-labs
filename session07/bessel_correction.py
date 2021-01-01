@@ -7,7 +7,9 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 from numba import jit
 import pickle
+import os
 from os import path
+import sys
 
 
 @jit(nopython=True)
@@ -99,7 +101,7 @@ def plot_ubsv(ax, results):
 
 
 def main():
-    file_name = 'bessel.pickle'
+    file_name = os.path.dirname(sys.argv[0]) + '/bessel.pickle'
     if not path.exists(file_name):
         results = run_trials()
         with open(file_name, 'wb') as file_out:
