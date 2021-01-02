@@ -42,6 +42,7 @@ SciComp105 - Windows Install
 # Install Requirements.txt
 	From within a PowerShell session that has been ACTIVATED
 	so it is running inside the Python *virtual* environment:
+		cd C:\Users\dbier\Desktop\scicomp105_labs
 		pip install -r requirements.txt
 
 	
