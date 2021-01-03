@@ -1,81 +1,16 @@
-SciComp105 - MacOS Install
-	
-# Check Local Computer For Python Interpreter
-	From within a terminal session:
-		which python3
-		sudo find / -type f -name '*python3.?'
-		printenv | sort
-	
-# Install Python 3.8
-	https://www.python.org/downloads/mac-osx
+SciComp105 Installation - macOS Desktops
+Using Terminal app
 
-# Install Git
-    https://git-scm.com/downloads
+10 commands:
 
-# Clone SciComp105-labs repository to Desktop
-	From within a terminal session:
-		cd ~/Desktop
-		git clone https://github.com/dbiersach/scicomp105-labs
-	
-# Create virtual environment
-	From within a terminal session:
-		cd ~/Desktop/scicomp105-labs
-		python3 -m venv .venv
-		
-# Activate virtual environment
-	From within a terminal session:
-		cd ~/Desktop/scicomp105-labs
-		source .venv/bin/activate
+cd ~/Desktop
+git clone https://github.com/dbiersach/scicomp105-labs
+cd ~/Desktop/scicomp105-labs
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install --upgrade setuptools
+pip install --upgrade wheel
+pip install -r requirements.txt
+code .
 
-# Update core Python tools
-	From within a terminal session that has been ACTIVATED
-	so it is running inside the Python *virtual* environment:
-		python -m pip install --upgrade pip
-		pip install --upgrade setuptools
-		pip install --upgrade wheel
-	
-# Install Requirements.txt
-	From within a terminal session that has been ACTIVATED
-	so it is running inside the Python *virtual* environment:
-		pip install -r requirements.txt
-		
-# Manual Install Modules (ONLY IF NECESSARY)
-	From within a terminal session that has been ACTIVATED
-	so it is running inside the Python *virtual* environment:
-		pip install --upgrade numpy==1.19.3				
-		pip install --upgrade matplotlib
-		pip install --upgrade scipy
-		pip install --upgrade mpmath	
-		pip install --upgrade Pillow
-		pip install --upgrade pygame
-		pip install --upgrade sympy
-		pip install --upgrade numba
-		pip install --upgrade vtk	
-		pip install --upgrade PyQt5
-		pip install --upgrade mayavi
-		pip install --upgrade pandas
-		pip install --upgrade sklearn
-		pip install --upgrade PuLP
-		pip install --upgrade ipython
-		pip install --upgrade mypy
-		
-# Deactivate virtual environment
-	From within a terminal session that has been ACTIVATED
-	so it is running inside the Python *virtual* environment:
-		deactivate
-
-# Install VSCode
-	https://code.visualstudio.com/download
-		
-# To run a Python script in a shell:
-	Ensure first line of "hello.py" has the shebang:
-		#!/usr/bin/python3
-		print('Hello world!')
-	chmod +x hello.py
-
-# Run Python script from virtual environment
-	nano "RunStandardPlot"
-		#!/usr/bin/env bash
-		source ~/Desktop/(project folder)/.venv/bin/activate
-		python ~/Desktop/hello/StandardPlot.py
-	chmod +x RunStandardPlot	

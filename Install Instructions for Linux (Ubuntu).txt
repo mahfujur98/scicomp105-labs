@@ -1,102 +1,15 @@
-SciComp105 - Linux (Ubuntu / Debian)
+SciComp105 Installation - Linux Desktops
+Using a shell/terminal
 
-# Check Linux distribution (ensure 64-bit, Ubuntu 18.04+)
-	uname -a
-	lsb_release -a
+10 commands:
 
-# Install PowerShell
-	https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-7.1
-	
-# Check Local Computer For Python Interpreter
-	from within a terminal session:
-		sudo apt install -y mlocate
-		sudo updatedb
-		sudo find / -type f -executable -name '*python3.?'
-		which python3
-		printenv | sort		
-	
-	From within a terminal session:
-	pwsh
-		Get-ChildItem -Path \ -Filter python3 -Recurse -Force -ErrorAction SilentlyContinue | Sort-Object FullName | Select-Object FullName
-		Get-ChildItem -Path \ -Filter activate -Recurse -Force -ErrorAction SilentlyContinue | Sort-Object FullName | Select-Object FullName
-		$Env:PATH.split(':')
-		dir env:
-	
-# Install Python 3.8
-	From within a terminal session:
-		sudo apt install -y python3.8 python3.8-dev python3.8-venv idle-python3.8 python3-pip
-		python --version
-
-# Install Git
-    https://git-scm.com/downloads
-	
-# Clone SciComp105-labs repository to Desktop
-	From within a terminal session:
-		cd ~/Desktop
-		git clone https://github.com/dbiersach/scicomp105-labs
-	
-# Create virtual environment
-	From within a terminal session:
-		cd ~/Desktop/scicomp105-labs
-		python3 -m venv .venv
-		
-# Activate virtual environment
-	From within a terminal session:
-		cd ~/Desktop/scicomp105-labs
-		source .venv/bin/activate
-
-# Update core Python tools
-	From within a terminal session that has been ACTIVATED
-	so it is running inside the Python *virtual* environment:
-		python -m pip install --upgrade pip
-		pip install --upgrade setuptools
-		pip install --upgrade wheel
-	
-# Install Requirements.txt
-	From within a terminal session that has been ACTIVATED
-	so it is running inside the Python *virtual* environment:
-		pip install -r requirements.txt
-		
-# Manual Install Modules (ONLY IF NECESSARY)
-	From within a terminal session that has been ACTIVATED
-	so it is running inside the Python *virtual* environment:
-		pip install --upgrade numpy==1.19.3				
-		pip install --upgrade matplotlib
-		pip install --upgrade scipy
-		pip install --upgrade mpmath	
-		pip install --upgrade Pillow
-		pip install --upgrade pygame
-		pip install --upgrade sympy
-		pip install --upgrade numba
-		pip install --upgrade vtk	
-		pip install --upgrade PyQt5
-		pip install --upgrade mayavi
-		pip install --upgrade pandas
-		pip install --upgrade sklearn
-		pip install --upgrade PuLP
-		pip install --upgrade ipython
-		pip install --upgrade mypy
-		
-# Deactivate virtual environment
-	From within a terminal session that has been ACTIVATED
-	so it is running inside the Python *virtual* environment:
-		deactivate
-
-# Install VSCode
-	sudo snap list
-	sudo snap install --classic code
-	sudo snap refresh
-
-		
-# To run a Python script in a shell:
-	Ensure first line of "hello.py" has the shebang:
-		#!/usr/bin/python3
-		print('Hello world!')
-	chmod +x hello.py
-
-# Run Python script from virtual environment
-	nano "RunStandardPlot"
-		#!/usr/bin/env bash
-		source ~/Desktop/(project folder)/.venv/bin/activate
-		python ~/Desktop/hello/StandardPlot.py
-	chmod +x RunStandardPlot	
+cd ~/Desktop
+git clone https://github.com/dbiersach/scicomp105-labs
+cd ~/Desktop/scicomp105-labs
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install --upgrade setuptools
+pip install --upgrade wheel
+pip install -r requirements.txt
+code .
