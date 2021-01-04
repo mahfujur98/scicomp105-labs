@@ -2,7 +2,8 @@
 # big_sqrt.py
 
 # From http://mpmath.org
-from mpmath import *
+from mpmath import mp, mpf, nstr
+
 mp.dps = 200
 
 x = 33590351381261822622218163873528556813698947665687615688767589021060440979380129292322236643684251591
