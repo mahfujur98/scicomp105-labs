@@ -50,15 +50,15 @@ def plot(ax):
     ax.grid()
     ax.legend(loc='best')
 
-    ax.figure.set_size_inches(11, 8.5)
-    ax.figure.savefig(f"plot_euler_gamma.png", dpi=600)
-    ax.figure.savefig(f"plot_euler_gamma.pdf",
-                      dpi=600, orientation='landscape')
-
     ax.set_xlim(0, 5.1)
     # TODO: Uncomment these two lines to zoom into a smaller region
     #ax.set_xlim(0, 2.1)
     #ax.set_ylim(0.5, 2.1)
+
+    ax.figure.set_size_inches(11, 8.5)
+    ax.figure.savefig(f"plot_euler_gamma.png", dpi=600)
+    ax.figure.savefig(f"plot_euler_gamma.pdf",
+                      dpi=600, orientation='landscape')
 
 
 def main():
